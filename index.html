@@ -1,0 +1,130 @@
+<html><head></head><body><form method="post" enctype="multipart/form-data" action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php">
+	
+		<style>
+			fieldset {
+				background: lightyellow;
+				border: 10px solid yellow;
+				margin-bottom: 10px;
+				width: 720px;
+			}
+			
+			label {
+				width: 180px;
+				text-align: right;
+				display: inline-block;
+			}
+
+			.sliderMinimum { 
+				background: red;
+				color: white;
+				text-align: center;
+				width: 50px;
+			}
+
+			.sliderMaximum {
+				background: purple;
+				color: white;
+				text-align: center;
+				width: 50px;
+			}
+
+			.autowidth{
+				width: auto;
+			}
+
+			textarea {width: 360px; height: 50px}
+			label:hover {font-size: 25px}
+            input:hover {font-size: 25px}
+
+		</style>
+	
+		<h1>Please Enter Your Details For Our Dating Website!</h1>
+		<fieldset>
+			<legend>Your Face</legend>
+
+			<label for="imagefilelabel">Your image:</label>
+			<input type="file" name="imageFileToUpload" required=""> <br>
+			<script>
+  var loadFile = function(event) {
+    var output = document.getElementById('output');
+    output.src = URL.createObjectURL(event.target.files[0]);
+  };
+</script>
+
+			<label for="previewimage">Image preview:</label> 
+			<img id="preview"> <br>
+
+		</fieldset> 
+		<br>
+		<fieldset>
+			<legend>Your General Details</legend>
+
+			<label for="namelabel">Name:</label>
+			<input type="text" name="name" required=""> <br>
+
+			<label for="genderlabel">Gender:</label>
+			<input type="radio" name="gender" value="male" required=""> 
+			<label class="autowidth">Male</label>
+	    	<input type="radio" name="gender" value="female" required=""> 
+	    	<label class="autowidth">Female</label> <br>
+
+	    	<label for="agelabel">Age:</label>
+	    	<input type="number" name="age" required=""> <br>
+
+	    	<label for="doblabel">Date of birth:</label>
+	    	<input type="date" name="date"> <br>
+
+	    	<label for="colorlabel">Favorite color:</label>
+	    	<input type="color" name="favcolor"> <br>
+
+	    	<label for="countrylabel">Which country:</label>
+	    	<select name="country">
+	    		<option value="none"></option>
+	    		<option value="usa">USA</option>
+	    		<option value="france">France</option>
+	    		<option value="italy">Italy</option>
+	    		<option value="brazil">Brazil</option>
+	    		<option value="cuba">Cuba</option>
+	    	</select>
+		</fieldset> 
+		<br>
+		<fieldset>
+			<legend>Your Indicators</legend>
+
+			<label for="heightlabel">Height:</label>
+			<label class="sliderMinimum">Short</label>
+			<input type="range" min="0" max="100" name="height"> 
+			<label class="sliderMaximum">Tall</label> <br>
+
+			<label for="salarylabel">Salary:</label>
+			<label class="sliderMinimum"> Poor </label>
+			<input type="range" min="0" max="100" name="salary">
+			<label class="sliderMaximum">Rich</label> <br>
+		</fieldset>
+		<br>
+		<fieldset>
+			<legend>Your Contact Information</legend>
+
+			<label for="emaillabel">Email:</label>
+			<input type="email" name="email" required=""> <br>
+
+			<label for="mobilelabel">Mobile:</label>
+			<input type="tel" name="mobile"> <br>
+
+			<label for="addresslabel">Address:</label>
+			<textarea name="address"></textarea> <br>
+
+			<label for="contactmethodlabel">Method to contact you:</label>
+			<input type="checkbox" name="contactMethod" value="contactEmail">
+			<label class="autowidth">Email</label>
+			<input type="checkbox" name="contactMethod" value="contactWhatsapp">
+			<label class="autowidth">Whatsapp</label> 
+			<input type="checkbox" name="contactMethod" value="contactInApp">
+			<label class="autowidth">In-app chat</label> <br>
+
+		</fieldset>
+		<br>
+		<input type="submit" value="Submit">
+		<script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
+	
+</form></body></html>
